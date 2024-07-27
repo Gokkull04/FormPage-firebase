@@ -1,12 +1,17 @@
+// App.js
 import React from 'react';
-import Form from './Form'; // Adjust the path if your Form.js is located elsewhere
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Form from './pages/Form';
 
 const App = () => {
-    return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <Form />
-        </div>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Form />} />
+
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
